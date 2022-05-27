@@ -1,0 +1,17 @@
+import React from 'react'
+import Cloud from '../components/cloud/Cloud'
+import Footer from '../components/footer/Footer'
+import Navbar from '../components/navbar/Navbar'
+ 
+
+const CloudPage = () => {
+  return (
+    <div>
+        <Navbar />
+        <Cloud />
+        <Footer/>
+    </div>
+  )
+}
+
+export default CloudPage
