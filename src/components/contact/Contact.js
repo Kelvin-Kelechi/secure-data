@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useRef} from 'react';
 import './ContactStyle.css'
 
 const Contact = () => {
+    const Useref = useRef()
     return (
         <div className='contact'>
             <div className="container">
@@ -10,7 +11,7 @@ const Contact = () => {
                         <h1><span>Contact</span> Us</h1>
                         <div>
                             <label>Name</label>
-                            <input type="text" placeholder='Enter your name'/>
+                            <input type="text" ref={Useref} placeholder='Enter your name'/>
                         </div>
                         <div>
                             <label>Email</label>
@@ -18,9 +19,11 @@ const Contact = () => {
                         </div>
                         <div>
                             <label>Message</label>
-                            <textarea rows='10' placeholder='Enter your name'/>
+                            <textarea rows='10'  placeholder='Enter your name'/>
                         </div>
-                        <button>Submit</button>
+                        <button onClick={()=>{
+                            Useref.current.focus()
+                        }}> Submit</button>
                     </form>
                 </div>
             </div>
